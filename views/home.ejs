@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1 style="text-align: center; margin: 5px; color: gray;">TODO App</h1>
+    <!--   Taking input for adding a task  -->
+    <form id='new-todo-form' action="/create-task" method='POST'>
+        <!-- Taking input of description -->
+        <div id="description">
+
+            <p>
+                DESCRIPTION
+            </p>
+
+            <input type="text" name='description' placeholder="What do you need to do?" required>
+
+        </div>
+        <!--taking input of category select and date  -->
+        <div id="category-date">
+            <!-- Category -->
+            <div id="cat">
+                <p>
+                    CATEGORY </p>
+
+                <select name="catagory" id="catagory">
+                    <option>Choose a catagory</option>
+                    <option>personal</option>
+                    <option>Home</option>
+                    <option>Work</option>
+                    <option>School</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <!-- Date -->
+            <div id="date-container">
+                <p>DUE DATE</p>
+                <input type="date" name="dueDate" placeholder="Enter Date" id="date" required>
+            </div>
+        </div>
+        <!-- Button's Container -->
+        <div id="button-container">
+            <!-- ADD TASK Button -->
+            <button type="submit" id="add-task">
+                <p> <i class="fa fa-plus" style="font-size:1.5rem;margin-right:20px;"></i>ADD TASK</p>
+            </button>
+            <!-- DELETE TASK Button -->
+            <button type="submit" form="delete-form" id="delete-task">
+                <p> <i class="fa fa-trash-o" style="font-size:1.5rem;color:white"></i> DELETE TASK</p>
+            </button>
+        </div>
+    </form>
+
+        <!-- Showing the task  -->
+    <form action="/delete-task" method="POST" id="delete-form">
+        <div id="todo-list-container">
+            <ul>
+                <% for(let i of todo_app) { %>
+                <li class='todo'>
+                    <div class="details">
+                        <span id="descriptionDate">
+                            <p>
+                                <input type="checkbox" name="checked" value="<%- i._id %>" style="margin-right: 10px;">
+                                <%= i.description %></p>
+                            <p><i class="fa fa-calendar" style="margin-right: 6px; margin-left:35px; "></i>
+                                <%= i.dueDate %></p>
+                        </span>
+                        <span id="button-container-p">
+                            <button><%= i.catagory %></button>
+                        </span>
+                    </div>
+
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>

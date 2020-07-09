@@ -1,0 +1,186 @@
+/* Common style */
+
+body{
+    font-family: sans-serif;
+    color:grey
+}
+
+input:focus,select:focus{
+    outline: none;
+}
+
+
+/* Adding Styling to description container */
+#description{
+    border: 1.5px solid rgb(190, 175, 175);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    /* margin-bottom: 8px; */
+}
+#description input{ 
+   border: 1px solid white;
+   width: 100%;
+   font-size: 1rem;
+   margin-bottom: 1%;
+   color: cadetblue;
+  
+}
+#description p{
+    margin-bottom: 8px;
+    
+}
+
+/* Adding style to category-date container */
+
+#category-date{
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+    /* category */
+#category-date #cat{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 1.5px solid rgb(190, 175, 175);; 
+    border-left: none;
+    width: 50%;
+    height:auto;
+}
+
+#cat p{
+    margin-bottom: 0px;
+    margin-left: 3px;
+}
+#category-date #cat select{
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1.4rem;
+    border: none;
+    color: grey;
+    margin-bottom: 8px;
+
+}
+
+    /* date */
+#category-date #date-container{
+    margin-top: 0px;
+    margin-bottom: 0px;  
+    border: 1.5px solid rgb(190, 175, 175);; 
+    border-left: none;
+    border-right: none;
+    width: 50%;
+    height:auto;
+    
+}
+#date-container p{
+    margin-bottom: 0px;
+    margin-left: 3px;
+}
+
+#category-date #date-container input{
+    width: 100%;
+    height: 2.4rem;
+    font-size: 1.4rem;
+    border: none;
+    color: grey;   
+    margin-bottom: 8px;
+}
+
+
+/* Adding style to Button's */
+
+#button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: row;
+   
+}
+
+    /* ADD TASK button */
+#button-container  #add-task{
+    
+    padding:1px 18px;;
+    margin: 10px;
+    background: rgb(68, 57, 57);
+    letter-spacing: 1px;
+    font-size:1.5rem;
+    color: white;
+    border: 2px white;
+    border-radius: 5px;    
+}
+
+
+    /* DELETE TASK button */
+#button-container  #delete-task{
+    
+    padding:1px 15px;
+    margin: 10px;
+    background: red;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    color: white;
+    border: 2px white;
+    border-radius: 5px;
+    
+}
+
+
+/* Showing task in form of list */
+
+#todo-list-container{
+    margin-top: 2rem;
+}
+
+#todo-list-container ul{
+    padding: 0;
+    list-style: none;
+}
+#todo-list-container ul li:hover{
+    background-color: lavender;
+}
+.todo{
+    padding: 3px 10px; 
+    box-shadow: 1px 1px 1px 1px lightgrey; 
+    display: flex;
+}
+
+.todo .details{
+    display: flex;
+    flex-direction:row;
+    width: 90%;
+
+}
+.details #descriptionDate{
+   margin-right: auto;
+}
+
+#button-container-p button{
+    padding: 10px 30px;
+    background: #27022d;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    margin-top: 20%;
+    border-radius: 5px;
+    background: #ff3c7f!important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
